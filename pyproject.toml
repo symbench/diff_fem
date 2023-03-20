@@ -1,0 +1,18 @@
+# https://drivendata.co/blog/python-packaging-2023
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "diff_fem"
+version = "0.1"
+description="Differential FEM"
+license = {text = "GPL-3.0-only"}
+authors = [
+  { name = "Miklos Maroti", email = "mmaroti@gmail.com" },
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+diff_fem = "diff_fem.__main__:run"
