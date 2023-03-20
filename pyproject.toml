@@ -1,4 +1,5 @@
 # https://drivendata.co/blog/python-packaging-2023
+# https://flit.pypa.io/en/latest/pyproject_toml.html
 
 [build-system]
 requires = ["flit_core >=3.2,<4"]
@@ -13,6 +14,10 @@ authors = [
   { name = "Miklos Maroti", email = "mmaroti@gmail.com" },
 ]
 requires-python = ">=3.7"
+dependencies = [
+  "numpy",
+  "torch",
+]
 
 [project.scripts]
 diff_fem = "diff_fem.__main__:run"

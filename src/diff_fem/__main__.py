@@ -13,5 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from .mesh2d import Mesh2d
+
+
 def run():
-    print("HELLO")
+    mesh = Mesh2d.load("../diffmesh/diffuse.npz")
