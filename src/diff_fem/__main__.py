@@ -14,7 +14,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from .mesh2d import Mesh2d
+from . import testfem
 
 
 def run():
     mesh = Mesh2d.load("../diffmesh/diffuse.npz")
+    mesh.print_info()
+    coords = mesh.face_coords()
+    print(Mesh2d.face_matrices(coords).shape)
+    # testfem.test()
